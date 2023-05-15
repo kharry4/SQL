@@ -1,0 +1,32 @@
+- Create a Grocery Store database
+
+CREATE TABLE store (id INTEGER PRIMARY KEY, name TEXT, price INTEGER, assembled TEXT, sale TEXT, sale_price INTEGER);
+INSERT INTO store VALUES
+(1, "bike", 11, "N, "Y", 95),
+(2, "treadmill", 325, "N", "Y", 285),
+(3, "eliptical_machine", 460, "N", "Y", 315),
+(4, "kettle_bell", 35, "Y", "N", 35),
+(5, "medicine_ball", 30, "Y", "Y", 28),
+(6, "weight", 25, "Y", "N", 25),
+(7, "yoga_mat", 30, "Y", "N", 30),
+(8, "jump_rope", 19, "Y", "Y", 12),
+(9, "punching_bag", 100, "Y", "Y", 72),
+(10, "boxing_gloves", 25, "Y", "N", 25),
+(11, "boxing_shorts", 15, "Y", "N", 15),
+(12, "yoga_pants", 18, "Y, "N", 18),
+(13, "water_bottle", 8, "Y", "N", 8),
+(14, "mouth_guard", 17, "Y", "N", 17),
+(15, "ankle_weights", 39, "Y", "Y", 29)
+;
+
+- Display the database order by descending price
+
+SELECT * FROM store ORDER BY price desc;
+
+- Display the database items priced below $45
+
+SELECT * FROM store WHERE price > 45;
+
+- What is the average price of the sale items
+
+SELECT AVG (price) FROM store WHERE sale = "Y";
